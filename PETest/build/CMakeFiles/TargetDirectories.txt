@@ -1,0 +1,3 @@
+/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles/edit_cache.dir
+/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles/rebuild_cache.dir
+/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles/RusticValley.dir
