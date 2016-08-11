@@ -1,0 +1,3 @@
+[submodule "PETest/libs/ParalyzedEngine"]
+	path = PETest/libs/ParalyzedEngine
+	url = https://github.com/TylerOrcutt/ParalyzedEngine
