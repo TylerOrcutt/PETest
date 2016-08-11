@@ -4,13 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/main.cpp" "/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles/RusticValley.dir/main.o"
+  "/home/twittumz/Desktop/git/PETest/PETest/main.cpp" "/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles/PETest.dir/main.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../kal"
   "../../../ParalyzedEngine"
   )
 

@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/RusticValleyPC/RusticValley
+CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/PETest/PETest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build
+CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/PETest/PETest/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/RusticValley.dir
+# Target rules for target CMakeFiles/PETest.dir
 
 # All Build rule for target.
-CMakeFiles/RusticValley.dir/all:
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/depend
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles --progress-num=1,2 "Built target RusticValley"
-.PHONY : CMakeFiles/RusticValley.dir/all
+CMakeFiles/PETest.dir/all:
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/depend
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles --progress-num=1,2 "Built target PETest"
+.PHONY : CMakeFiles/PETest.dir/all
 
 # Include target in all.
-all: CMakeFiles/RusticValley.dir/all
+all: CMakeFiles/PETest.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/RusticValley.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RusticValley.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles 0
-.PHONY : CMakeFiles/RusticValley.dir/rule
+CMakeFiles/PETest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PETest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles 0
+.PHONY : CMakeFiles/PETest.dir/rule
 
 # Convenience name for target.
-RusticValley: CMakeFiles/RusticValley.dir/rule
+PETest: CMakeFiles/PETest.dir/rule
 
-.PHONY : RusticValley
-
-# clean rule for target.
-CMakeFiles/RusticValley.dir/clean:
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/clean
-.PHONY : CMakeFiles/RusticValley.dir/clean
+.PHONY : PETest
 
 # clean rule for target.
-clean: CMakeFiles/RusticValley.dir/clean
+CMakeFiles/PETest.dir/clean:
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/clean
+.PHONY : CMakeFiles/PETest.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/PETest.dir/clean
 
 .PHONY : clean
 

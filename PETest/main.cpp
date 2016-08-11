@@ -22,9 +22,9 @@ init_PECookie(&cookie);
   PEWindow *pe;
 //PE_HTTPSRequest("rustednail.ddns.net","serverlist",&cookie,"test=test");
   if(devMode){
-  pe= createPEWindow(800,600,"RusticValley DeveloperMode");
+  pe= createPEWindow(800,600,"PE Test DeveloperMode");
   }else{
-   pe= createPEWindow(800,600,"RusticValley");
+   pe= createPEWindow(800,600,"PE Test");
 
   } 
   while(1) {

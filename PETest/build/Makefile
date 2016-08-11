@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/RusticValleyPC/RusticValley
+CMAKE_SOURCE_DIR = /home/twittumz/Desktop/git/PETest/PETest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build
+CMAKE_BINARY_DIR = /home/twittumz/Desktop/git/PETest/PETest/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles /home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/RusticValleyPC/RusticValley/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,31 +111,31 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RusticValley
+# Target rules for targets named PETest
 
 # Build rule for target.
-RusticValley: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RusticValley
-.PHONY : RusticValley
+PETest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PETest
+.PHONY : PETest
 
 # fast build rule for target.
-RusticValley/fast:
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/build
-.PHONY : RusticValley/fast
+PETest/fast:
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/build
+.PHONY : PETest/fast
 
 # target to build an object file
 main.o:
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/main.o
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/main.o
 .PHONY : main.o
 
 # target to preprocess a source file
 main.i:
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/main.i
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/main.i
 .PHONY : main.i
 
 # target to generate assembly for a file
 main.s:
-	$(MAKE) -f CMakeFiles/RusticValley.dir/build.make CMakeFiles/RusticValley.dir/main.s
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/main.s
 .PHONY : main.s
 
 # Help Target
@@ -146,7 +146,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... RusticValley"
+	@echo "... PETest"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=gnu++0x
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/kal -I/home/twittumz/Desktop/git/RusticValleyPC/RusticValley/../../ParalyzedEngine 
+CXX_INCLUDES = -I/home/twittumz/Desktop/git/PETest/PETest/../../ParalyzedEngine 
 

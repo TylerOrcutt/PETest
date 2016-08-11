@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=gnu++0x   CMakeFiles/PETest.dir/main.o  -o PETest  -L/home/twittumz/Desktop/git/PETest/PETest/../../ParalyzedEngine/ParalyzedEngine/build -rdynamic -lssl -lcrypto -lGL -lGLU -lX11 -lParalyzedEngine -lX11 -lGL -lGLU -lParalyzedEngine -Wl,-rpath,/home/twittumz/Desktop/git/PETest/PETest/../../ParalyzedEngine/ParalyzedEngine/build 
