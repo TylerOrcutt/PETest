@@ -45,6 +45,8 @@ GL/gl.h
 ../../../ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
 Shaders/ShaderProgram.h
 ../../../ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
+Texture.h
+../../../ParalyzedEngine/ParalyzedEngine/Texture.h
 GL/glew.h
 -
 GL/gl.h

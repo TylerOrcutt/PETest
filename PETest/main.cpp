@@ -49,7 +49,7 @@ if(PE_load_shaderProgram(&program,PE_default_vertexShader(),PE_default_fragmentS
   return -1;
 }
 
-PETexture * sp1 =PE_load_texture("../images/test/sp2.png");
+PETexture * sp1 =PE_load_texture("./images/sp3.png",32,32);
 if(sp1==NULL){
    std::cout<<"Failed to load texture\n";
 }
@@ -91,9 +91,9 @@ PE_Sprite_Renderer_init(&program);
                 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
               
                   glBindTexture(GL_TEXTURE_2D,sp1->textureID);
-                 PE_Sprite_Draw(64,64,32,32);
-                         glBindTexture(GL_TEXTURE_2D,1);
-                 PE_Sprite_Draw(128,128,64,64);
+                 PE_Sprite_Draw(sp1,64,64,32,32);
+                   
+                 PE_Sprite_Draw(sp1,128,128,640,480);
                        glXSwapBuffers(pe->dpy, pe->win);
 
 
