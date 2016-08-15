@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PETest.dir/main.o"
+  "CMakeFiles/PETest.dir/main.cpp.o"
   "PETest.pdb"
   "PETest"
 )

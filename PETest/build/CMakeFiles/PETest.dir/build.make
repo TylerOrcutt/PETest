@@ -57,39 +57,42 @@ include CMakeFiles/PETest.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PETest.dir/flags.make
 
-CMakeFiles/PETest.dir/main.o: CMakeFiles/PETest.dir/flags.make
-CMakeFiles/PETest.dir/main.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PETest.dir/main.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PETest.dir/main.o -c /home/twittumz/Desktop/git/PETest/PETest/main.cpp
+CMakeFiles/PETest.dir/main.cpp.o: CMakeFiles/PETest.dir/flags.make
+CMakeFiles/PETest.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PETest.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PETest.dir/main.cpp.o -c /home/twittumz/Desktop/git/PETest/PETest/main.cpp
 
-CMakeFiles/PETest.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PETest.dir/main.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/PETest/PETest/main.cpp > CMakeFiles/PETest.dir/main.i
+CMakeFiles/PETest.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PETest.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twittumz/Desktop/git/PETest/PETest/main.cpp > CMakeFiles/PETest.dir/main.cpp.i
 
-CMakeFiles/PETest.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PETest.dir/main.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/PETest/PETest/main.cpp -o CMakeFiles/PETest.dir/main.s
+CMakeFiles/PETest.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PETest.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twittumz/Desktop/git/PETest/PETest/main.cpp -o CMakeFiles/PETest.dir/main.cpp.s
 
-CMakeFiles/PETest.dir/main.o.requires:
+CMakeFiles/PETest.dir/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/PETest.dir/main.o.requires
+.PHONY : CMakeFiles/PETest.dir/main.cpp.o.requires
 
-CMakeFiles/PETest.dir/main.o.provides: CMakeFiles/PETest.dir/main.o.requires
-	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/main.o.provides.build
-.PHONY : CMakeFiles/PETest.dir/main.o.provides
+CMakeFiles/PETest.dir/main.cpp.o.provides: CMakeFiles/PETest.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PETest.dir/build.make CMakeFiles/PETest.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/PETest.dir/main.cpp.o.provides
 
-CMakeFiles/PETest.dir/main.o.provides.build: CMakeFiles/PETest.dir/main.o
+CMakeFiles/PETest.dir/main.cpp.o.provides.build: CMakeFiles/PETest.dir/main.cpp.o
 
 
 # Object files for target PETest
 PETest_OBJECTS = \
-"CMakeFiles/PETest.dir/main.o"
+"CMakeFiles/PETest.dir/main.cpp.o"
 
 # External object files for target PETest
 PETest_EXTERNAL_OBJECTS =
 
-PETest: CMakeFiles/PETest.dir/main.o
+PETest: CMakeFiles/PETest.dir/main.cpp.o
 PETest: CMakeFiles/PETest.dir/build.make
+PETest: /usr/lib64/libSOIL.so
+PETest: /usr/lib64/libGLU.so
+PETest: /usr/lib64/libGL.so
 PETest: CMakeFiles/PETest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable PETest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PETest.dir/link.txt --verbose=$(VERBOSE)
@@ -99,7 +102,7 @@ CMakeFiles/PETest.dir/build: PETest
 
 .PHONY : CMakeFiles/PETest.dir/build
 
-CMakeFiles/PETest.dir/requires: CMakeFiles/PETest.dir/main.o.requires
+CMakeFiles/PETest.dir/requires: CMakeFiles/PETest.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/PETest.dir/requires
 
