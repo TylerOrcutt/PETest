@@ -24,8 +24,10 @@ endif()
 
 
  
+ 
 #Engine not in libs directory
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} ${SOIL_INCLUDE_DIR}  ${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/)
 LINK_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/ParalyzedEngine/build/)
 add_executable(${PROJECT_NAME} main.cpp )
+ 
 target_link_libraries(${PROJECT_NAME}  ParalyzedEngine  X11 GLEW ${SOIL_LIBRARY} ${OPENSSL_LIBRARIES} ${OPENGL_LIBRARIES}    )

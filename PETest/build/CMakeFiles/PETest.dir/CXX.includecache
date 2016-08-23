@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../../../ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp
+string
+-
+iostream
+-
+../PEDictionary.hpp
+../../../ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+
+../../../ParalyzedEngine/ParalyzedEngine/Map/Map.hpp
+stdio.h
+-
+vector
+-
+fstream
+-
+string
+-
+../JSON/JSONParser.hpp
+../../../ParalyzedEngine/ParalyzedEngine/JSON/JSONParser.hpp
+../PEDictionary.hpp
+../../../ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+
 ../../../ParalyzedEngine/ParalyzedEngine/Network/WebClient.h
 sys/types.h
 -
@@ -16,6 +38,14 @@ netdb.h
 netinet/in.h
 -
 openssl/ssl.h
+-
+
+../../../ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
+string
+-
+vector
+-
+iostream
 -
 
 ../../../ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
@@ -94,5 +124,7 @@ ParalyzedEngine/Network/WebClient.h
 ParalyzedEngine/Shaders/ShaderProgram.h
 -
 ParalyzedEngine/Texture.h
+-
+ParalyzedEngine/Map/Map.hpp
 -
 
