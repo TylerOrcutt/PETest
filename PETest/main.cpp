@@ -102,7 +102,8 @@ PE_init_sprite_renderer(&program);
    if(blocks!=nullptr){
      for(int i=0;i<blocks->size();i++){
        PEBlock blk = (*blocks)[i];
-    //  PE_draw_rect(blk.x,blk.y,blk.width,blk.height);
+    // PE_draw_rect(blk.x,blk.y,blk.width,blk.height);
+     PE_draw_sprite(sp1,blk.x,blk.y,blk.width,blk.height,blk.imgx,blk.imgy,32,32);
      }
    }
 
