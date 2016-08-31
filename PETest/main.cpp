@@ -15,12 +15,43 @@
 #include <ParalyzedEngine/Shaders/ShaderProgram.h>
 #include <ParalyzedEngine/Texture.h>
 #include <ParalyzedEngine/Map/Map.hpp>
+
+#include "camera.h"
 bool devMode=false;
 PEMap map;
+bool mu=false,md=false,mw=false,me=false;
 void handleArgs(int, char **);
 
-void keyPress(){
-  std::cout<<"KeyPress callBack\n";
+void keyPress(int key){
+  std::cout<<"KeyPress callBack " <<key<<"\n";
+  if(key==25){
+    mu=true;
+  }
+    if(key==39){
+    md=true;
+  }
+     if(key==40){
+    me=true;
+  }
+     if(key==38){
+    mw=true;
+  }
+}
+void keyRelease(int key){
+  std::cout<<"KeyRlease callBack"<<key<<"\n";
+   if(key==25){
+   mu=false;
+   }
+
+    if(key==39){
+    md=false;
+  }
+       if(key==40){
+    me=false;
+  }
+     if(key==38){
+    mw=false;
+  }
 }
 
 int main(int args,char *argv[]){
@@ -34,7 +65,7 @@ std::cout<<"Engine version: " <<PE_ENGINE_VERSION<<std::endl;
 
 PEWindow *pe;
  
-
+Camera cam(0,0);
 PECookie cookie;
 init_PECookie(&cookie);
 //PE_HTTPSRequest("rustednail.ddns.net","serverlist",&cookie,"test=test");
@@ -46,6 +77,7 @@ init_PECookie(&cookie);
      } 
 
 PE_window_set_onKeyPress(pe, keyPress);
+PE_window_set_onKeyRelease(pe, keyRelease);
    //load shaders
    PEShaderProgram program;
 PE_init_shaderProgram(&program);
@@ -56,6 +88,7 @@ if(PE_load_shaderProgram(&program,PE_default_vertexShader2D(),PE_default_fragmen
 }
 
 PETexture * sp1 =PE_load_texture("./images/sp2.png");
+PETexture * charsheet =PE_load_texture("./images/charsheet.png");
 if(sp1==NULL){
    std::cout<<"Failed to load texture\n";
 }
@@ -77,7 +110,7 @@ std::cout<<"Texture ID: "<<sp1->textureID<<std::endl;
 //test Webrequest
 
 PE_init_sprite_renderer(&program);
-
+float px=100,py=100;
    
    
              glClearColor(0.0,0.0, 0.0, 1.0);
@@ -87,6 +120,33 @@ PE_init_sprite_renderer(&program);
      
     
  	            getNextEvent(pe, &xev);
+
+                if(mu){
+                  py-=5;
+                      if(py<=cam.getY()+32){
+                    cam.setY(cam.getY()-5);
+                  }
+                }
+                if(md){
+                  py+=5;
+                    if(py>=cam.getY()+pe->gwa.height-96){
+                    cam.setY(cam.getY()+5);
+                  }
+                }
+                if(mw){
+                  px-=5;
+                  if(px<=cam.getX()+32){
+                    cam.setX(cam.getX()-5);
+                  }
+                }
+                if(me){
+                  px+=5;
+                       if(px>=cam.getX()+pe->gwa.width-96){
+                    cam.setX(cam.getX()+5);
+                  }
+                }
+
+
 
               	XGetWindowAttributes(pe->dpy, pe->win, &pe->gwa);
                glViewport(0, 0, pe->gwa.width, pe->gwa.height);
@@ -102,12 +162,13 @@ PE_init_sprite_renderer(&program);
    if(blocks!=nullptr){
      for(int i=0;i<blocks->size();i++){
        PEBlock blk = (*blocks)[i];
+ 
     // PE_draw_rect(blk.x,blk.y,blk.width,blk.height);
-     PE_draw_sprite(sp1,blk.x,blk.y,blk.width,blk.height,blk.imgx,blk.imgy,32,32);
+     PE_draw_sprite(sp1,blk.x-cam.getX(),blk.y-cam.getY(),blk.width,blk.height,blk.imgx,blk.imgy,32,32);
      }
    }
 
-
+     PE_draw_sprite(charsheet,px-cam.getX(),py-cam.getY(),64,64,1,0,32,32);
                 // PE_draw_rect(64,64,32,32);
                    
                 // PE_draw_sprite(sp1,128,128,640,480,2,0,32,32);

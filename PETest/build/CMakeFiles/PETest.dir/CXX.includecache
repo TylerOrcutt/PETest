@@ -21,6 +21,8 @@ vector
 -
 fstream
 -
+../Texture.h
+../../../ParalyzedEngine/ParalyzedEngine/Texture.h
 string
 -
 ../JSON/JSONParser.hpp
@@ -100,6 +102,12 @@ stdlib.h
 SOIL/SOIL.h
 -
 
+/home/twittumz/Desktop/git/PETest/PETest/camera.cpp
+camera.h
+/home/twittumz/Desktop/git/PETest/PETest/camera.h
+
+/home/twittumz/Desktop/git/PETest/PETest/camera.h
+
 /home/twittumz/Desktop/git/PETest/PETest/main.cpp
 iostream
 -
@@ -127,4 +135,6 @@ ParalyzedEngine/Texture.h
 -
 ParalyzedEngine/Map/Map.hpp
 -
+camera.h
+/home/twittumz/Desktop/git/PETest/PETest/camera.h
 
