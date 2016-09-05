@@ -6,3 +6,4 @@ cmake ../
 make
 ./PETest -dev -m ../test2.map
 
+#./PETest -dev -3d
