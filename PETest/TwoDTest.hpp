@@ -22,9 +22,9 @@ if(PE_load_shaderProgram(&program,PE_default_vertexShader2D(),PE_default_fragmen
 std::cout<<"loading map\n";
  std::string mapdata = map.load_map(mapfile.c_str());
  std::cout<<"parseing map file\n";
- unsigned long ct= getTime();
+ unsigned long ct= Helper::getTime();
 map.parseMap(mapdata);
-std::cout<<"Took "<< miliToTime(getTime()-ct)<<"\n";
+std::cout<<"Took "<< miliToTime(Helper::getTime()-ct)<<"\n";
 std::cout<<"loading assests\n";
 
 
@@ -40,6 +40,7 @@ PE_init_sprite_renderer(&program);
 
 }
 void Render(){
+  glUseProgram(program.programID);
  if(mu){
                   py-=5;
                       if(py<=(*cam).getY()+32){
@@ -80,19 +81,7 @@ void Render(){
 }
 
 
-unsigned long getTime(){
-  timeval time;
-gettimeofday(&time, NULL);
-unsigned long m1 =  (time.tv_sec * 1000) ;
-unsigned long m2 =  (time.tv_usec / 1000);
-if(m2> ULONG_MAX - m1){
-  std::cout<<"======OVERFLOW=====\n";
-}
 
-
-unsigned long millis = (time.tv_sec * 1000) + (time.tv_usec / 1000);
-return millis;
-}
 std::string miliToTime(unsigned long ms){
   int sec=0;
   int min=0;
@@ -106,16 +95,16 @@ std::string miliToTime(unsigned long ms){
 }
  void keyPress(int key){
  // std::cout<<"KeyPress callBack " <<key<<"\n";
-  if(key==25){
+  if(key=='w'){
     mu=true;
   }
-    if(key==39){
+    if(key=='s'){
     md=true;
   }
-     if(key==40){
+     if(key=='d'){
     me=true;
   }
-     if(key==38){
+     if(key=='a'){
     mw=true;
   }
 }

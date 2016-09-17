@@ -17,8 +17,9 @@
 #include <ParalyzedEngine/Shaders/ShaderProgram.h>
 #include <ParalyzedEngine/Texture.h>
 #include <ParalyzedEngine/Map/Map.hpp>
-
+#include <ParalyzedEngine/TextRenderer.h>
 #include "camera.h"
+#include "Helper.hpp"
 #include "ThreeDTest.hpp"
 #include "TwoDTest.hpp"
 bool devMode=false;
@@ -27,7 +28,9 @@ std::string mapfile;
 bool threedtest=false;
 TwoDTest* twoD;
 ThreeDTest *threeD;
-
+int frames=0;
+int fps=0;
+unsigned long lastupdate=0;
 void handleArgs(int, char **);
 void keyRelease(int key){
    if(!threedtest){
@@ -73,7 +76,7 @@ PE_window_set_onKeyRelease(pe, keyRelease);
    
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-             glOrtho(0, pe->gwa.width, pe->gwa.height,0, 0,50);
+         // glOrtho(0, pe->gwa.width, pe->gwa.height,0, 0,50);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
  
@@ -85,9 +88,15 @@ PE_window_set_onKeyRelease(pe, keyRelease);
 		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 //test Webrequest
 
+PEShaderProgram  guiShaders;
+if(PE_load_shaderProgram(&guiShaders,PE_default_vertexShader2D(),PE_default_fragmentShader2D())<0){
+  std::cout<<"failed to load shader program\n";
+  return 0;
+}
+PE_init_sprite_renderer(&guiShaders);
+PEFont *font = PE_TextRenderer_init("fonts/DejaVuSans.ttf",16);
 
-
-   
+ 
    
              glClearColor(0.0,0.0, 0.0, 1.0);
   while(pe->WINDOW_CLOSING== PE_FALSE) {
@@ -97,7 +106,9 @@ PE_window_set_onKeyRelease(pe, keyRelease);
                glViewport(0, 0, pe->gwa.width, pe->gwa.height);
        glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
+  if(!threedtest){
              glOrtho(0, pe->gwa.width, pe->gwa.height,0, 0,50);
+  }
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
                 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -105,13 +116,34 @@ PE_window_set_onKeyRelease(pe, keyRelease);
      
     
  	            getNextEvent(pe, &xev);
- 
+ glUseProgram(0);
+ glPushMatrix();
                 if(!threedtest){
+
                  twoD->Render();
                }else{
                  threeD->Render();
                }
+ glColor4f(1,0,0,1);
+  frames++;
+  unsigned long ct = Helper::getTime();
+  if(ct-lastupdate>=1000){
+    
+  fps=frames;
+      frames=0;
+      lastupdate=ct;
+  }
+      std::stringstream ss;
+      ss<<"FPS:"<<fps;
 
+       glViewport(0, 0, pe->gwa.width, pe->gwa.height);
+       glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+            glOrtho(0, pe->gwa.width, pe->gwa.height,0, 0,50);
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+     glUseProgram(guiShaders.programID);
+   PE_Render_Text(font,ss.str().c_str(),pe->gwa.width-75,25);
                 // PE_draw_rect(64,64,32,32);
                    
                 // PE_draw_sprite(sp1,128,128,640,480,2,0,32,32);
@@ -146,6 +178,7 @@ void handleArgs(int args,char * argv[]){
     } else if(devMode && args>2){
           if(std::string(argv[2])=="-3d"){
             threedtest=true;
+            std::cout<<"running 3d test\n";
         //   map.load_map(argv[3]);
         }
     }

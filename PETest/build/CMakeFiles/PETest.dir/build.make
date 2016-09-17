@@ -119,6 +119,7 @@ PETest: CMakeFiles/PETest.dir/build.make
 PETest: /usr/lib64/libSOIL.so
 PETest: /usr/lib64/libGLU.so
 PETest: /usr/lib64/libGL.so
+PETest: /usr/lib64/libfreetype.so
 PETest: CMakeFiles/PETest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable PETest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PETest.dir/link.txt --verbose=$(VERBOSE)

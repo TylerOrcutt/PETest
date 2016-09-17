@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=gnu++0x
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/twittumz/Desktop/git/PETest/PETest/../../ParalyzedEngine 
+CXX_INCLUDES = -I/usr/include/freetype2 -I/home/twittumz/Desktop/git/PETest/PETest/../../ParalyzedEngine 
 

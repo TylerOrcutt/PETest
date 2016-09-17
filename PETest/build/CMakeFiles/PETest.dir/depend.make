@@ -10,12 +10,16 @@ CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/Model
 CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/Network/WebClient.h
 CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
 CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
-CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
 CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
 CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/TextRenderer.h
 CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/Texture.h
+CMakeFiles/PETest.dir/main.cpp.o: ../../../ParalyzedEngine/ParalyzedEngine/Window.h
+CMakeFiles/PETest.dir/main.cpp.o: ../Helper.hpp
 CMakeFiles/PETest.dir/main.cpp.o: ../ThreeDTest.hpp
 CMakeFiles/PETest.dir/main.cpp.o: ../TwoDTest.hpp
 CMakeFiles/PETest.dir/main.cpp.o: ../camera.h
 CMakeFiles/PETest.dir/main.cpp.o: ../main.cpp
+CMakeFiles/PETest.dir/main.cpp.o: /usr/include/freetype2/freetype/config/ftheader.h
+CMakeFiles/PETest.dir/main.cpp.o: /usr/include/freetype2/ft2build.h
 

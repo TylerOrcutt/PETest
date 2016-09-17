@@ -11,11 +11,15 @@ CMakeFiles/PETest.dir/main.cpp.o
  ../../../ParalyzedEngine/ParalyzedEngine/Network/WebClient.h
  ../../../ParalyzedEngine/ParalyzedEngine/PEDictionary.hpp
  ../../../ParalyzedEngine/ParalyzedEngine/ParalyzedEngine.h
- ../../../ParalyzedEngine/ParalyzedEngine/ParalyzedEngineWindow.h
  ../../../ParalyzedEngine/ParalyzedEngine/Shaders/ShaderProgram.h
  ../../../ParalyzedEngine/ParalyzedEngine/SpriteRenderer.h
+ ../../../ParalyzedEngine/ParalyzedEngine/TextRenderer.h
  ../../../ParalyzedEngine/ParalyzedEngine/Texture.h
+ ../../../ParalyzedEngine/ParalyzedEngine/Window.h
+ /home/twittumz/Desktop/git/PETest/PETest/Helper.hpp
  /home/twittumz/Desktop/git/PETest/PETest/ThreeDTest.hpp
  /home/twittumz/Desktop/git/PETest/PETest/TwoDTest.hpp
  /home/twittumz/Desktop/git/PETest/PETest/camera.h
  /home/twittumz/Desktop/git/PETest/PETest/main.cpp
+ /usr/include/freetype2/freetype/config/ftheader.h
+ /usr/include/freetype2/ft2build.h

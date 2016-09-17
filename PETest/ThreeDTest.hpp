@@ -6,11 +6,11 @@ PEModel * model;
     public:
     ThreeDTest(PEWindow * _pe){
         pe=_pe;
-        model = new PEModel("../models/cube.obj");
+       model = new PEModel("../models/stall.obj");
 
     }
     void Render(){
-        
+         model->Draw();
     }
 
 };
