@@ -17,6 +17,7 @@ void Camera::move(float _x,float _y){
 }
 
 void Camera::resize(float w,float h){
+    
     width=w;
     height=h;
 }

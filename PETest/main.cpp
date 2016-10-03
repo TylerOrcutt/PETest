@@ -93,6 +93,16 @@ if(PE_load_shaderProgram(&guiShaders,PE_default_vertexShader2D(),PE_default_frag
   std::cout<<"failed to load shader program\n";
   return 0;
 }
+
+
+PEShaderProgram  thshaders;
+if(PE_load_shaderProgram(&thshaders,PE_default_vertexShader3D(),PE_default_fragmentShader3D())<0){
+  std::cout<<"failed to load shader program\n";
+  return 0;
+}
+
+
+
 PE_init_sprite_renderer(&guiShaders);
 PEFont *font = PE_TextRenderer_init("fonts/DejaVuSans.ttf",16);
 
@@ -122,6 +132,7 @@ PEFont *font = PE_TextRenderer_init("fonts/DejaVuSans.ttf",16);
 
                  twoD->Render();
                }else{
+                      glUseProgram(thshaders.programID);
                  threeD->Render();
                }
  glColor4f(1,0,0,1);
