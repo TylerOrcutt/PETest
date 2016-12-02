@@ -1,3 +1,0 @@
-/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles/edit_cache.dir
-/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles/rebuild_cache.dir
-/home/twittumz/Desktop/git/PETest/PETest/build/CMakeFiles/PETest.dir

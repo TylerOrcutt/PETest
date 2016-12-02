@@ -67,7 +67,7 @@ void Render(){
                 }
 
                   glBindTexture(GL_TEXTURE_2D,sp1->textureID);
-   std::vector <PEBlock>* blocks = map.getBlocks();
+  /* std::vector <PEBlock>* blocks = map.getBlocks();
    if(blocks!=nullptr){
      for(int i=0;i<blocks->size();i++){
        PEBlock blk = (*blocks)[i];
@@ -75,8 +75,18 @@ void Render(){
     // PE_draw_rect(blk.x,blk.y,blk.width,blk.height);
      PE_draw_sprite(sp1,blk.x-(*cam).getX(),blk.y-(*cam).getY(),blk.width,blk.height,blk.imgx,blk.imgy,32,32);
      }
-   }
+   }*/
 
+int width = map.getWidth();
+ int height = map.getHeight();
+
+PEBlock **blks = map.getBlocks();
+ for(int x=0;x<width;x++){
+   for(int y=0;y<height;y++){
+          PE_draw_sprite(sp1,(x*32)-(*cam).getX(),(y*32)-(*cam).getY(),32,32,blks[x][y].imgx,blks[x][y].imgy,32,32);
+  
+   }
+ }
      PE_draw_sprite(charsheet,px-(*cam).getX(),py-(*cam).getY(),64,64 ,1,0,32,32);
 }
 

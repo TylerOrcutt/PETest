@@ -5,6 +5,6 @@ mkdir build
 cd build
 cmake ../
 make
-./PETest -dev -m ../test2.map
+./PETest -dev -m ../test.map
 
 #./PETest -dev -3d

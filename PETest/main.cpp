@@ -18,6 +18,7 @@
 #include <ParalyzedEngine/Texture.h>
 #include <ParalyzedEngine/Map/Map.hpp>
 #include <ParalyzedEngine/TextRenderer.h>
+#include <ParalyzedEngine/Memory/PEalloc/PEalloc.h>
 #include "camera.h"
 #include "Helper.hpp"
 #include "ThreeDTest.hpp"
@@ -54,10 +55,11 @@ std::cout<<"Engine version: " <<PE_ENGINE_VERSION<<std::endl;
 
 PEWindow *pe;
  
+char * a =(char*)PE_malloc(sizeof(char));
 
 PECookie cookie;
 init_PECookie(&cookie);
-//PE_HTTPSRequest("rustednail.ddns.net","serverlist",&cookie,"test=test");
+//PE_HTTPSRequest("10.0.0.11","serverlist",&cookie,"test=test");
  
   if(devMode){
   pe= createPEWindow(800,600,"PE Map Test DeveloperMode");
