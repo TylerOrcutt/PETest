@@ -7,6 +7,7 @@ project( PETest) # this is case sensitive
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(Freetype REQUIRED)
+find_package(Lua REQUIRED)
 
 SET(SOIL_NAMES SOIL Soil soil)
 FIND_LIBRARY(SOIL_LIBRARY NAMES ${SOIL_NAMES} )
@@ -26,8 +27,8 @@ endif()
  
  
 #Engine not in libs directory
-include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} ${SOIL_INCLUDE_DIR} ${FREETYPE_INCLUDE_DIRS}  ${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/)
+include_directories( ${LUA_INCLUDE_DIRS} ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} ${SOIL_INCLUDE_DIR} ${FREETYPE_INCLUDE_DIRS}  ${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/)
 LINK_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../ParalyzedEngine/ParalyzedEngine/build/)
 add_executable(${PROJECT_NAME} main.cpp camera.cpp )
  
-target_link_libraries(${PROJECT_NAME}  ParalyzedEngine  X11 GLEW ${SOIL_LIBRARY} ${OPENSSL_LIBRARIES} ${OPENGL_LIBRARIES} ${FREETYPE_LIBRARY})
+target_link_libraries(${PROJECT_NAME}  ParalyzedEngine  X11 GLEW ${LUA_LIBRARY} ${SOIL_LIBRARY} ${OPENSSL_LIBRARIES} ${OPENGL_LIBRARIES} ${FREETYPE_LIBRARY})

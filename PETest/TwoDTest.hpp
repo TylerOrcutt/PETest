@@ -79,7 +79,7 @@ void Render(){
 
 int width = map.getWidth();
  int height = map.getHeight();
-
+map.Update();
 PEBlock **blks = map.getBlocks();
  for(int x=0;x<width;x++){
    for(int y=0;y<height;y++){
