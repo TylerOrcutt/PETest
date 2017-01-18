@@ -1,19 +1,21 @@
 #pragma once
-#include "camera.h"
+//#include "camera.h"
 #include <ParalyzedEngine/Map/Map.hpp>
+#include <ParalyzedEngine/Camera/PETwoDCamera.hpp>
 class TwoDTest{
-PETexture * sp1;
-PETexture * charsheet;
-  PEShaderProgram program;
-Camera * cam;
-float px=100,py=100;
-PEWindow* pe;
-bool mu=false,md=false,mw=false,me=false;
-PEMap map;
-public:
-TwoDTest(PEWindow* _pe, std::string mapfile){
-    cam = new Camera(0,0);
-pe= _pe;
+	PETexture * sp1;
+	PETexture * charsheet;
+	PEShaderProgram program;
+	PETwoDCamera * cam;
+	float px=100,py=100;
+	PEWindow* pe;
+	bool mu=false,md=false,mw=false,me=false;
+	PEMap map;
+	
+	public:
+	TwoDTest(PEWindow* _pe, std::string mapfile){
+		cam = new PETwoDCamera(0,0);
+		pe= _pe;
 if(PE_load_shaderProgram(&program,PE_default_vertexShader2D(),PE_default_fragmentShader2D())<0){
   std::cout<<"failed to load shader program\n";
   return ;
@@ -28,12 +30,13 @@ std::cout<<"Took "<< miliToTime(Helper::getTime()-ct)<<"\n";
 std::cout<<"loading assests\n";
 
 
- sp1 =PE_load_texture("./images/sp2.png");
+//sp1 =PE_load_texture("./images/sp2.png");
+
  charsheet =PE_load_texture("./images/charsheet.png");
 if(sp1==NULL){
-   std::cout<<"Failed to load texture\n";
+  // std::cout<<"Failed to load texture\n";
 }
-std::cout<<"Texture ID: "<<sp1->textureID<<std::endl;
+//std::cout<<"Texture ID: "<<sp1->textureID<<std::endl;
 PE_init_sprite_renderer(&program);
 
 
@@ -66,7 +69,7 @@ void Render(){
                   }
                 }
 
-                  glBindTexture(GL_TEXTURE_2D,sp1->textureID);
+//                  glBindTexture(GL_TEXTURE_2D,sp1->textureID);
   /* std::vector <PEBlock>* blocks = map.getBlocks();
    if(blocks!=nullptr){
      for(int i=0;i<blocks->size();i++){
@@ -80,13 +83,15 @@ void Render(){
 int width = map.getWidth();
  int height = map.getHeight();
 map.Update();
+map.Draw(cam);
+/*
 PEBlock **blks = map.getBlocks();
  for(int x=0;x<width;x++){
    for(int y=0;y<height;y++){
           PE_draw_sprite(sp1,(x*32)-(*cam).getX(),(y*32)-(*cam).getY(),32,32,blks[x][y].imgx,blks[x][y].imgy,32,32);
   
    }
- }
+ }*/
      PE_draw_sprite(charsheet,px-(*cam).getX(),py-(*cam).getY(),64,64 ,1,0,32,32);
 }
 

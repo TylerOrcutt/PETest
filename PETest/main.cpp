@@ -12,7 +12,7 @@
 #include <limits.h>
 #include <math.h>
 #include <ParalyzedEngine/ParalyzedEngine.h>
-#include <ParalyzedEngine/SpriteRenderer.h>
+
 #include <ParalyzedEngine/Network/WebClient.h>
 #include <ParalyzedEngine/Shaders/ShaderProgram.h>
 #include <ParalyzedEngine/Texture.h>
