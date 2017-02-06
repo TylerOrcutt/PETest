@@ -7,6 +7,6 @@ cp -R Props/ build/
 cd build
 cmake ../
 make
-./PETest -dev -m "Maps/Untitled 1.map"
+./PETest -dev -m "Maps/rotationtest.map"
 
 #./PETest -dev -3d
