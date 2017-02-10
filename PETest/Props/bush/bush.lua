@@ -6,7 +6,7 @@ end
 function onUpdate()
 	a=a+1
 	--println("Hello world " .. a)
- rotateObject(1);
+--otateObject(1);
 	--	moveLeft();
  
 	

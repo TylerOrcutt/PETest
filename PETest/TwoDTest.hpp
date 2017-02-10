@@ -2,6 +2,13 @@
 //#include "camera.h"
 #include <ParalyzedEngine/Map/Map.hpp>
 #include <ParalyzedEngine/Camera/PETwoDCamera.hpp>
+#include <ParalyzedEngine/GameObjects/PEGameObject.hpp>
+#include "GameObjects/Bush.hpp"
+#include "GameObjects/Saw.hpp"
+#include <typeinfo>
+
+
+ 	std::map<std::string,  controllerType > PEGameObject::objectTypes;
 class TwoDTest{
 	PETexture * sp1;
 	PETexture * charsheet;
@@ -14,7 +21,12 @@ class TwoDTest{
 	
 	public:
 	TwoDTest(PEWindow* _pe, std::string mapfile){
-		cam = new PETwoDCamera(0,0);
+
+ 
+	PEGameObject::addMap("bush", Bush::create);
+  PEGameObject::addMap("saw", Saw::create);
+
+  	cam = new PETwoDCamera(0,0);
 		pe= _pe;
 if(PE_load_shaderProgram(&program,PE_default_vertexShader2D(),PE_default_fragmentShader2D())<0){
   std::cout<<"failed to load shader program\n";
