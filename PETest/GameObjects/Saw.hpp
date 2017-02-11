@@ -2,17 +2,21 @@
 #define __GAME_OBJECT_SAW_
 #include <stdio.h>
 #include <ParalyzedEngine/GameObjects/PEGameObjectController.hpp>
-
+#include <stdlib.h>
 class Saw:public PEGameObjectController {
 public:
+ int rots=1;
 static PEGameObjectController * create(){return new Saw;}
 Saw(){
-
+ rots = rand()%20+1;
     }
 
 void Update(){
+  
     PEGameObjectController::Update();
-    printf("hello from saw\n");
+    PEGameObjectController::rotation+=rots;
+    //printf("saw updated\n");
+ 
     
  }
 
