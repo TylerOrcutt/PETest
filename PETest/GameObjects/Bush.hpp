@@ -14,7 +14,7 @@ speed=rand()%5;
 
 void Update(){
     PEGameObjectController::Update();
-     PEGameObjectController::x+=speed;
+    // PEGameObjectController::x+=speed;
     
  }
 

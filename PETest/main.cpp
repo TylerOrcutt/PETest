@@ -98,9 +98,11 @@ if(PE_load_shaderProgram(&guiShaders,PE_default_vertexShader2D(),PE_default_frag
 
 
 PEShaderProgram  thshaders;
+if(threedtest){
 if(PE_load_shaderProgram(&thshaders,PE_default_vertexShader3D(),PE_default_fragmentShader3D())<0){
   std::cout<<"failed to load shader program\n";
   return 0;
+}
 }
 
 

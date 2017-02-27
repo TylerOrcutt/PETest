@@ -23,7 +23,7 @@ class TwoDTest{
 	TwoDTest(PEWindow* _pe, std::string mapfile){
 
  
-	PEGameObject::addMap("bush", Bush::create);
+//	PEGameObject::addMap("bush", Bush::create);
   PEGameObject::addMap("saw", Saw::create);
 
   	cam = new PETwoDCamera(0,0);

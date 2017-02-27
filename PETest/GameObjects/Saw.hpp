@@ -9,6 +9,9 @@ public:
 static PEGameObjectController * create(){return new Saw;}
 Saw(){
  rots = rand()%20+1;
+   if(rand()%2+1 == 1){
+       rots=-rots;
+   }
     }
 
 void Update(){
